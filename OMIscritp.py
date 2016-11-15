@@ -64,15 +64,3 @@ module_id = connection.execute(DB, uid, PASSWORD, 'ir.module.module', 'search',
                                [('name', '=', MODULES)])
 install = connection.execute(DB, uid, PASSWORD, "ir.module.module",
                                 "button_immediate_install", module_id)
-
-#module_id = [connection.execute_kw(DB, uid, PASSWORD, 'ir.module.module',
-#                                   'search',[('name', '=', MODULE)]) for MODULE
-#           in MODULES] 
-#module_id = connection.execute_kw(DB, uid, PASSWORD, 'ir.module.module', 'search',
-#                               [('name', '=', MODULES)])
-#print module_id, "<<"
-
-#install = connection.execute_kw(DB, uid, PASSWORD, "ir.module.module",
-#                           "button_immediate_install", MODULES)
-#print install
-
