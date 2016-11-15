@@ -65,11 +65,13 @@ connection = xmlrpclib.ServerProxy('http://{0}:{1}/{2}'.format(URL, PORT,
 uid = connection.login(DB, USERNAME, PASSWORD)
 connection = xmlrpclib.ServerProxy('http://{0}:{1}/{2}'.format(URL, PORT,
 																OBJECTPATH))
-print connection,"<<<<<<"
+print connection
 
 
 print connection.execute_kw(DB, uid, PASSWORD, 'ir.module.module', 'search',
 								[('name', '=', MODULES[0])])
+
+
 #module_id = [connection.execute_kw(DB, uid, PASSWORD, 'ir.module.module',
 #									'search',[('name', '=', MODULE)]) for MODULE
 #			in MODULES] 
@@ -80,6 +82,16 @@ print module_id, "<<"
 #install = connection.execute_kw(DB, uid, PASSWORD, "ir.module.module",
 #							"button_immediate_install", MODULES)
 #print install
+
+
+
+
+
+
+
+
+
+
 
 
 
